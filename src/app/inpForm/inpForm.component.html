@@ -1,0 +1,27 @@
+<div class="container">
+    <div class="inpForm">
+        <div>
+            <p>Сумма кредита:</p>
+            <input type="number" [(ngModel)]="creditParams.sum" (ngModelChange)="calc()"  />
+            <span>BYN</span>
+        </div>
+        <div>
+            <p>Срок:</p>
+            <select [(ngModel)]="creditParams.time" (ngModelChange)="calc()">
+                <option *ngFor="let date of creditTime" [value]="date.val">
+                    {{date.text}}
+                </option>
+            </select>
+        </div>
+        <div>
+            <p>Ставка кредита:</p>
+            <input type="number" [(ngModel)]="creditParams.rate" (ngModelChange)="calc()">
+            <span>%</span>
+        </div>
+        <div>
+            <p>Вариант расчета кредита:</p>
+            <p class="typeCredit" [ngClass]="{selectCredit: creditParams.type == 0}" (click)="changeType(0)">Аннуитентный</p>
+            <p class="typeCredit" [ngClass]="{selectCredit: creditParams.type == 1}" (click)="changeType(1)">Дифференцированный</p>
+        </div>
+    </div>
+</div>

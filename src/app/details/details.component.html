@@ -1,0 +1,27 @@
+<div class="container">
+    <div>
+        <table>
+            <td nowrap>
+                <tr>Номер платежа</tr>
+                <tr>Дата платежа</tr>
+                <tr>Платеж по процентам</tr>
+                <tr>Платеж по основному долгу</tr>
+                <tr>Общая сумма платежа</tr>
+                <tr>Остаток по телу кредита</tr>
+            </td>
+        </table>
+    </div>
+    <div class="container_table_data">
+        <table class="table_data">
+            <td nowrap *ngFor="let item of table">
+                <tr class="cellNumber">{{item.num}}</tr>
+                <tr>{{item.date}}</tr>
+                <tr><app-money [money]="item.interestPayment"></app-money></tr>
+                <tr><app-money [money]="item.loanPayment"></app-money></tr>
+                <tr><app-money [money]="item.totalPayment"></app-money></tr>
+                <tr><app-money [money]="item.credit"></app-money></tr>
+            </td>
+
+        </table>
+    </div>
+</div>

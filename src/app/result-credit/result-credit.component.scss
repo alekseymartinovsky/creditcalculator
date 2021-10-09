@@ -1,0 +1,35 @@
+@import '../colors.scss';
+
+.container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+
+.result_block{
+    display: block;
+    margin-top: 50px; 
+    font-weight: 300;  
+    button{
+        border: none; 
+        outline: none;
+        background: $color_2;
+        color: white;
+        border: 1px solid black;
+        &:hover{
+            background: $color_1;
+        }
+        margin-top: 5px;
+    }
+}
+
+@media (max-width: 885px) {
+    .container{
+        justify-content: flex-start;
+    }
+    .result_block{
+        margin-top: 20px; 
+        margin-left: 5%;
+    }
+}

@@ -1,0 +1,54 @@
+@import '../colors.scss';
+
+.container{
+    display: flex;
+    justify-content: center;
+}
+
+.inpForm{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    margin-top: 5%;
+    div{
+        padding: 0 30px;
+        p{
+            margin-bottom: 10px;
+        }
+        .typeCredit{
+            margin-bottom: 0px;
+        }
+        input{
+            width: 150px;
+        }
+    }
+}
+
+.typeCredit{
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.selectCredit{
+    color: $color_2;
+}
+
+.error{
+    border: 1px solid $color_4;
+    font-size: 20px;
+}
+
+@media (max-width: 885px) {
+    .inpForm{
+        flex-direction: column;
+        justify-content: flex-start;
+        margin-left: 5%;
+        div{
+            padding: 0px;
+            margin-bottom: 5px;
+            p{
+                margin-bottom: 0px;
+            }
+        }
+    }
+}

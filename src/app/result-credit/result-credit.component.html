@@ -1,0 +1,29 @@
+<div class="container">
+    <div class="result_block">
+        <p>Сумма кредита: 
+            <app-money [money]="resultCredit.creditSum"></app-money>
+        </p>
+        <p *ngIf="resultCredit.type == 0">
+            Ежемесячный платёж: 
+            <app-money [money]="resultCredit.monthPay"></app-money>
+        </p>
+        <p *ngIf="resultCredit.type == 1">
+            Максимальная сумма платежа: 
+            <app-money [money]="resultCredit.maxPay"></app-money>
+        </p>
+        <p *ngIf="resultCredit.type == 1">
+            Минимальная сумма платежа: 
+            <app-money [money]="resultCredit.minPay"></app-money>
+        </p>
+        <p>
+            Общая сумма платежа: 
+            <app-money [money]="resultCredit.totalSum"></app-money>
+        </p>
+        <p>
+            Сумма переплаты: 
+            <app-money [money]="resultCredit.overpayment"></app-money>
+        </p>
+        <p><button (click)="changeViewDetails()">Детали расчета</button></p>
+    </div>
+</div>
+<app-details *ngIf="viewDetails"></app-details>

@@ -1,0 +1,36 @@
+.container{
+    display: flex;
+    margin-top: 20px;
+    padding: 0 5%;
+    font-weight: 300;
+}
+
+.container_table_data{
+    overflow-x: auto;
+    display: flex;
+    border-right: 1px solid black;
+}
+
+table{
+    border-spacing: 0;
+    border-spacing: none;
+}
+
+.table_data{
+    border-spacing: none;
+    border-collapse: collapse;
+}
+
+td{
+    min-width: 100%;
+    border: 1px solid black;
+    padding: 0 10px;
+}
+
+tr{
+    padding: 10px
+}
+
+.cellNumber{
+    text-align: center;
+}
